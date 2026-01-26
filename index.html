@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNTlabs - 치열하게 설계하고 집요하게 검증합니다</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><img src="images/logo.png" alt="TNT Labs"></a>
+            <div class="nav-menu-wrapper">
+                <div class="nav-slider"></div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-active">tntlabs</a></li>
+                    <li><a href="portfolio.html">포트폴리오</a></li>
+                    <li><a href="#contact">문의하기</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    치열하게 설계하고<br>
+                    <span class="hero-title-bold">집요하게 검증합니다</span>
+                </h1>
+                <div class="hero-bottom">
+                    <p class="hero-subtitle">
+                        이유가 있는 설계, 기술을 지향합니다.<br>
+                        장식요소가 아닌 기능하는 프로덕트를 빚어냅니다.
+                    </p>
+                    <a href="#contact" class="btn-outline">
+                        회사소개서 다운로드
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-video-container">
+                <video class="hero-video" autoplay muted loop playsinline>
+                    <source src="images/background.mp4" type="video/mp4">
+                </video>
+                <div class="hero-video-overlay">
+                    <p class="hero-video-text">상상만 했던 아이디어가 현실로</p>
+                    <img src="images/tntlabs.png" alt="TNTlabs" class="hero-video-brand-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 페인포인트 섹션 -->
+    <section class="painpoint">
+        <div class="container">
+            <h2 class="painpoint-title">
+                정말 잘 만들어질까?
+            </h2>
+            <p class="painpoint-answer">개발, 디자인 외주. 수많은 업체들 중 선택하기 어려우시죠?
+                <br>잘못 맡겼다가 후회만 남을까 불안하시죠?
+                <br>tntlabs는 그런 고객님들의 걱정을 잘 알고 있습니다.
+                <br>정확한 구현부터 소통, 합리적인 비용까지.
+                <br>
+                <br><strong>저희에게 맡기시면 후회가 없을 겁니다.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- What We Do 섹션 -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">빠르고 정확하게</h2>
+            <p class="section-subtitle">tntlabs가 제공하는 핵심 서비스</p>
+
+            <div class="service-cards">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h3>서비스 디자인</h3>
+                    <p>UI/UX 디자인, 디자인 시스템 구축으로 사용자 경험을 극대화합니다.</p>
+                    <ul class="service-tags">
+                        <li>UI/UX</li>
+                        <li>Design System</li>
+                        <li>Branding</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3>서비스 개발</h3>
+                    <p>웹, 앱, 플랫폼, MVP 개발까지 End-to-End 솔루션을 제공합니다.</p>
+                    <ul class="service-tags">
+                        <li>WEB/APP</li>
+                        <li>Platform</li>
+                        <li>MVP</li>
+                        <li>IoT</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>하이테크 솔루션</h3>
+                    <p>LLM, AI 기술을 활용한 차세대 솔루션을 개발합니다.</p>
+                    <ul class="service-tags">
+                        <li>LLM</li>
+                        <li>AI</li>
+                        <li>Machine Learning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Strength 섹션 (주석처리)
+    <section class="strength" id="about">
+        <div class="container">
+            <h2 class="section-title">Our Strength</h2>
+            <p class="section-subtitle">TNT Labs만의 강점</p>
+
+            <div class="strength-grid">
+                <div class="strength-item">
+                    <div class="strength-number">01</div>
+                    <h3>전문 개발팀</h3>
+                    <p>10년 이상의 경력을 보유한 시니어 개발자들이 직접 프로젝트를 수행합니다.</p>
+                </div>
+                <div class="strength-item">
+                    <div class="strength-number">02</div>
+                    <h3>빠른 개발 속도</h3>
+                    <p>체계적인 프로세스와 풍부한 경험으로 빠르고 정확한 개발을 보장합니다.</p>
+                </div>
+                <div class="strength-item">
+                    <div class="strength-number">03</div>
+                    <h3>합리적인 비용</h3>
+                    <p>중간 마진 없이 직접 개발하여 합리적인 가격으로 최고의 품질을 제공합니다.</p>
+                </div>
+                <div class="strength-item">
+                    <div class="strength-number">04</div>
+                    <h3>지속적인 지원</h3>
+                    <p>프로젝트 완료 후에도 유지보수와 기술 지원을 지속적으로 제공합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Our Projects 섹션 -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Our Projects</h2>
+            <p class="section-subtitle">TNT Labs가 만들어온 프로젝트들</p>
+
+            <div class="project-carousel">
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>대규모 이커머스 플랫폼 구축</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="project-info">
+                        <h3>Healthcare App</h3>
+                        <p>헬스케어 모바일 애플리케이션</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    <div class="project-info">
+                        <h3>FinTech Solution</h3>
+                        <p>핀테크 결제 시스템 개발</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                    <div class="project-info">
+                        <h3>AI Chatbot</h3>
+                        <p>AI 기반 고객 상담 챗봇</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                    <div class="project-info">
+                        <h3>IoT Dashboard</h3>
+                        <p>스마트팩토리 IoT 대시보드</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);"></div>
+                    <div class="project-info">
+                        <h3>Education Platform</h3>
+                        <p>온라인 교육 플랫폼</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review 섹션 -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">Client Reviews</h2>
+            <p class="section-subtitle">고객들의 생생한 후기</p>
+
+            <div class="review-scroll">
+                <div class="review-track">
+                    <div class="review-card">
+                        <p class="review-text">"TNT Labs와 함께한 프로젝트는 정말 만족스러웠습니다. 전문적인 기술력과 빠른 대응이 인상적이었어요."</p>
+                        <div class="reviewer">
+                            <span class="reviewer-name">김OO 대표</span>
+                            <span class="reviewer-company">스타트업 A</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <p class="review-text">"기대 이상의 결과물을 받았습니다. 특히 UI/UX 디자인이 매우 세련되고 사용자 친화적이었습니다."</p>
+                        <div class="reviewer">
+                            <span class="reviewer-name">이OO PM</span>
+                            <span class="reviewer-company">기업 B</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <p class="review-text">"커뮤니케이션이 원활하고 일정 관리가 철저해서 안심하고 프로젝트를 맡길 수 있었습니다."</p>
+                        <div class="reviewer">
+                            <span class="reviewer-name">박OO CTO</span>
+                            <span class="reviewer-company">스타트업 C</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <p class="review-text">"복잡한 요구사항도 명확하게 이해하고 구현해주셔서 감사합니다. 다음 프로젝트도 함께하고 싶습니다."</p>
+                        <div class="reviewer">
+                            <span class="reviewer-name">정OO 팀장</span>
+                            <span class="reviewer-company">기업 D</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ 섹션 -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">FAQ</h2>
+            <p class="section-subtitle">자주 묻는 질문</p>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>프로젝트 진행 절차는 어떻게 되나요?</span>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>상담 → 기획 → 디자인 → 개발 → 테스트 → 런칭 순서로 진행됩니다. 각 단계마다 고객과 충분한 커뮤니케이션을 통해 만족스러운 결과물을 만들어갑니다.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>개발 비용은 어떻게 산정되나요?</span>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>프로젝트의 규모, 복잡도, 기간에 따라 비용이 산정됩니다. 무료 상담을 통해 정확한 견적을 받아보실 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>개발 기간은 얼마나 걸리나요?</span>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>프로젝트 규모에 따라 다르지만, 일반적인 MVP는 2-3개월, 풀 서비스는 4-6개월 정도 소요됩니다.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>유지보수는 어떻게 진행되나요?</span>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>프로젝트 완료 후 1개월간 무상 유지보수를 제공하며, 이후에는 월정액 유지보수 계약을 통해 지속적인 지원이 가능합니다.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>기술 스택은 어떤 것을 사용하나요?</span>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>React, Next.js, Node.js, Python, Flutter 등 최신 기술 스택을 사용합니다. 프로젝트 특성에 맞는 최적의 기술을 선택하여 개발합니다.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>원격 미팅도 가능한가요?</span>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>네, Zoom, Google Meet 등을 통한 원격 미팅이 가능합니다. 전국 어디서든 프로젝트 진행이 가능합니다.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>NDA(비밀유지계약) 체결이 가능한가요?</span>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>물론입니다. 프로젝트 시작 전 NDA 체결을 통해 고객의 아이디어와 정보를 철저히 보호합니다.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>정부지원사업 연계도 가능한가요?</span>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>네, 창업진흥원, 중소벤처기업부 등 다양한 정부지원사업과 연계하여 개발 비용 부담을 줄일 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners 섹션 (주석처리)
+    <section class="partners">
+        <div class="container">
+            <h2 class="section-title">Partners</h2>
+            <div class="partner-scroll">
+                <div class="partner-track">
+                    <div class="partner-item">Partner 1</div>
+                    <div class="partner-item">Partner 2</div>
+                    <div class="partner-item">Partner 3</div>
+                    <div class="partner-item">Partner 4</div>
+                    <div class="partner-item">Partner 5</div>
+                    <div class="partner-item">Partner 6</div>
+                    <div class="partner-item">Partner 7</div>
+                    <div class="partner-item">Partner 8</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Contact 섹션 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">프로젝트에 대해 상담해 보세요</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>contact@tntlabs.co.kr</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p>010-9674-1345</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Address</h3>
+                        <p>경기도 성남시 분당구 판교로 700</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="이름" required>
+                    <input type="tel" placeholder="연락처">
+                    <textarea placeholder="프로젝트에 대해 간단히 설명해주세요" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">문의하기</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Contact Us -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <div class="footer-info">
+                        <p><strong>대표:</strong> 고득성</p>
+                        <p><strong>사업자등록번호:</strong> 431-10-02875</p>
+                        <p><strong>사업자정보:</strong> 응용 소프트웨어 개발 및 공급업</p>
+                        <p><strong>전화번호:</strong> 010-9674-1345</p>
+                        <p><strong>이메일:</strong> contact@tntlabs.co.kr</p>
+                        <p><strong>판교 오피스:</strong> 경기도 성남시 분당구 판교로 700</p>
+                    </div>
+                </div>
+
+                <!-- Follow Us -->
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/teamtntlab/" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jaehyun-go-91a072356/" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- 다크/라이트 모드 토글 -->
+                    <div class="theme-toggle">
+                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="theme-toggle-input">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 TNTLABS ALL RIGHTS RESERVED.</p>
+                <a href="#" class="privacy-link">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
