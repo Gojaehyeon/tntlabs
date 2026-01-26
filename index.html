@@ -15,8 +15,8 @@
             <div class="nav-menu-wrapper">
                 <div class="nav-slider"></div>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-active">tntlabs</a></li>
-                    <li><a href="portfolio.html">포트폴리오</a></li>
+                    <li><a href="#hero" class="nav-active">tntlabs</a></li>
+                    <li><a href="#projects">포트폴리오</a></li>
                     <li><a href="#contact">문의하기</a></li>
                 </ul>
             </div>
@@ -106,15 +106,16 @@
     <!-- About Us 섹션 -->
     <section class="about" id="about">
         <div class="container">
-            <p class="about-label">Apple Developer Academy @ POSTECH</p>
-            <h2 class="about-title">두 명의 개발자,<br><span>하나의 팀</span></h2>
+            <h2 class="about-title">한 사람처럼 일하는<br><span>최고의 팀</span></h2>
+            <p class="about-desc">포항공과대학교 Apple Developer Academy 출신 두 개발자가 설립한 팀입니다. 무엇을 만들어야 할지, 어떻게 만들어야 할지, 클라이언트가 무엇을 원하고 어려워하는지를 정확하게 파악합니다. 최신 기술 스택에 대해 깊이있게 이해하고 있기에 단기적 구현이 아닌 장기적인 유지보수를 감안한 개발을 합니다.</p>
 
             <div class="team-wrapper">
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="member-placeholder"></div>
+                        <img src="images/air.png" alt="Air" class="member-photo">
                     </div>
                     <div class="member-content">
+                        <h3 class="member-name">Air</h3>
                         <span class="member-label">Full-Stack Developer</span>
                         <p class="member-desc">기계어부터 머신러닝까지, 깊은 차원의 개발을 해온 개발자. 프레임워크와 언어를 가리지 않습니다.</p>
                         <div class="member-tags">
@@ -125,9 +126,10 @@
 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="member-placeholder"></div>
+                        <img src="images/go.png" alt="Go" class="member-photo">
                     </div>
                     <div class="member-content">
+                        <h3 class="member-name">Go</h3>
                         <span class="member-label">Developer & Designer</span>
                         <p class="member-desc">홍대 미대 출신 UX 전문가. 20개 이상의 앱을 직접 개발하고 배포한 경험을 보유하고 있습니다.</p>
                         <div class="member-tags">
@@ -139,7 +141,7 @@
         </div>
     </section>
 
-    <!-- What We Do 섹션 -->
+    <!-- What We Do 섹션 (주석처리)
     <section class="services" id="services">
         <div class="container">
             <h2 class="section-title">What We Do</h2>
@@ -185,6 +187,7 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- Tech Stack 섹션 -->
     <section class="techstack" id="techstack">
@@ -320,7 +323,7 @@
         </div>
     </section>
 
-    <!-- Review 섹션 -->
+    <!-- Review 섹션 (주석처리)
     <section class="reviews">
         <div class="container">
             <h2 class="section-title">Client Reviews</h2>
@@ -360,6 +363,7 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- FAQ 섹션 -->
     <section class="faq" id="faq">
@@ -410,50 +414,6 @@
                     </button>
                     <div class="faq-answer">
                         <p>프로젝트 완료 후 1개월간 무상 유지보수를 제공하며, 이후에는 월정액 유지보수 계약을 통해 지속적인 지원이 가능합니다.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>기술 스택은 어떤 것을 사용하나요?</span>
-                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>React, Next.js, Node.js, Python, Flutter 등 최신 기술 스택을 사용합니다. 프로젝트 특성에 맞는 최적의 기술을 선택하여 개발합니다.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>원격 미팅도 가능한가요?</span>
-                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>네, Zoom, Google Meet 등을 통한 원격 미팅이 가능합니다. 전국 어디서든 프로젝트 진행이 가능합니다.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>NDA(비밀유지계약) 체결이 가능한가요?</span>
-                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>물론입니다. 프로젝트 시작 전 NDA 체결을 통해 고객의 아이디어와 정보를 철저히 보호합니다.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>정부지원사업 연계도 가능한가요?</span>
-                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>네, 창업진흥원, 중소벤처기업부 등 다양한 정부지원사업과 연계하여 개발 비용 부담을 줄일 수 있습니다.</p>
                     </div>
                 </div>
             </div>
