@@ -1208,27 +1208,23 @@ body:not(.dark-mode) .social-btn {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 60px;
-    margin-bottom: 60px;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: start;
 }
 
-.footer-col h4 {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 24px;
-    color: white;
-}
-
-.footer-info p {
+.footer-col p {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     line-height: 1.6;
 }
 
-.footer-info p strong {
-    color: rgba(255, 255, 255, 0.8);
+.footer-col.footer-right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
 
 .footer-links {
@@ -1460,7 +1456,12 @@ body.dark-mode .theme-toggle .moon-icon {
 
     .footer-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .footer-col.footer-right {
+        justify-content: center;
     }
 
     .footer-bottom {
