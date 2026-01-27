@@ -47,7 +47,8 @@ body.dark-mode .service-tags li {
 }
 
 body.dark-mode .project-card {
-    background: var(--bg-light);
+    background: #1f1f1f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 body.dark-mode .review-card {
