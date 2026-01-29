@@ -1,0 +1,29 @@
+.yearFilter {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.yearBtn {
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.yearBtn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.yearBtn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}

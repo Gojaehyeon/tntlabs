@@ -1,0 +1,148 @@
+.projectDetail {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 32px;
+    transition: color 0.3s ease;
+}
+
+.backLink:hover {
+    color: var(--primary-color);
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 60px;
+}
+
+.heroImage {
+    border-radius: 20px;
+    aspect-ratio: 16 / 10;
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
+.description {
+    font-size: 18px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.meta {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+.metaItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.metaLabel {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+.metaValue {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    padding: 6px 14px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.content {
+    border-top: 1px solid var(--border-color);
+    padding-top: 48px;
+}
+
+.markdown h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
+.markdown h2:first-child {
+    margin-top: 0;
+}
+
+.markdown h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+.markdown p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.markdown ul {
+    padding-left: 24px;
+    margin-bottom: 16px;
+}
+
+.markdown li {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .meta {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}

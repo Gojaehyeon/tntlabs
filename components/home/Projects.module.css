@@ -1,0 +1,74 @@
+.projects {
+    background: var(--bg-light);
+    overflow: hidden;
+}
+
+.projectCarousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.projectCard {
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+:global(body.dark-mode) .projectCard {
+    background: #1f1f1f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.projectCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.projectImage {
+    aspect-ratio: 16 / 10;
+    position: relative;
+    overflow: hidden;
+}
+
+.projectInfo {
+    padding: 24px;
+}
+
+.projectInfo h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.projectInfo p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.moreButton {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.viewMore {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.viewMore:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}

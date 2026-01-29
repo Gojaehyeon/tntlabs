@@ -1,0 +1,42 @@
+.portfolio {
+    padding-top: 140px;
+    padding-bottom: 80px;
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+
+.title {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--text-color);
+}
+
+.desc {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 48px;
+}
+
+.divider {
+    height: 1px;
+    background: var(--border-color);
+    margin-bottom: 48px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .portfolio {
+        padding-top: 120px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
