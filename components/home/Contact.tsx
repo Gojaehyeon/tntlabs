@@ -10,10 +10,30 @@ export default function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: FormEvent) => {
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    alert('문의가 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.');
-    setFormData({ name: '', phone: '', message: '' });
+    setSending(true);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert('문의가 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.');
+        setFormData({ name: '', phone: '', message: '' });
+      } else {
+        alert('전송에 실패했습니다. 다시 시도해주세요.');
+      }
+    } catch {
+      alert('전송에 실패했습니다. 다시 시도해주세요.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -58,7 +78,9 @@ export default function Contact() {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             />
-            <button type="submit" className="btn-primary">문의하기</button>
+            <button type="submit" className="btn-primary" disabled={sending}>
+              {sending ? '전송 중...' : '문의하기'}
+            </button>
           </form>
         </div>
       </div>
