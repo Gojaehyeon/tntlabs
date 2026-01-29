@@ -11,6 +11,8 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+const CONTACT_EMAIL = 'contact@tntlabs.kr';
+
 export async function POST(request: NextRequest) {
   try {
     const { name, phone, message } = await request.json();
@@ -20,8 +22,8 @@ export async function POST(request: NextRequest) {
     }
 
     await transporter.sendMail({
-      from: `tntlabs 문의 <${process.env.ICLOUD_EMAIL}>`,
-      to: process.env.ICLOUD_EMAIL,
+      from: `tntlabs 문의 <${CONTACT_EMAIL}>`,
+      to: CONTACT_EMAIL,
       subject: `[tntlabs 문의] ${name}님의 문의`,
       html: `
         <h2>새로운 문의가 접수되었습니다</h2>
