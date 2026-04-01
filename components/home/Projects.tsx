@@ -55,16 +55,14 @@ export default function Projects() {
           ))}
         </div>
 
-        {projects.length > 0 && (
-          <div className={styles.moreButton}>
-            <Link href="/portfolio" className={styles.viewMore}>
-              프로젝트 더 보기
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </Link>
-          </div>
-        )}
+        <div className={styles.moreButton}>
+          <Link href="/portfolio" className={styles.viewMore}>
+            프로젝트 더 보기
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );

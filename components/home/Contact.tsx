@@ -38,26 +38,28 @@ export default function Contact() {
 
   return (
     <section className={styles.contact} id="contact">
-      <div className="container">
-        <h2 className={`section-title ${styles.leftAlign}`}>Contact Us</h2>
-        <p className={`section-subtitle ${styles.leftAlign}`}>프로젝트에 대해 상담해 보세요</p>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <span className={styles.label}>Contact</span>
+          <h2 className={styles.title}>Get in touch</h2>
+        </div>
 
-        <div className={styles.contactContent}>
-          <div className={styles.contactInfo}>
-            <div className={styles.contactItem}>
-              <h3>Email</h3>
-              <p>contact@tntlabs.kr</p>
+        <div className={styles.content}>
+          <div className={styles.info}>
+            <div className={styles.infoItem}>
+              <span className={styles.infoLabel}>Email</span>
+              <p className={styles.infoValue}>contact@tntlabs.kr</p>
             </div>
-            <div className={styles.contactItem}>
-              <h3>Phone</h3>
-              <p>010-9674-1345</p>
+            <div className={styles.infoItem}>
+              <span className={styles.infoLabel}>Phone</span>
+              <p className={styles.infoValue}>010-9674-1345</p>
             </div>
-            <div className={styles.contactItem}>
-              <h3>Address</h3>
-              <p>경기도 성남시 분당구 판교로 700</p>
+            <div className={styles.infoItem}>
+              <span className={styles.infoLabel}>Address</span>
+              <p className={styles.infoValue}>경기도 성남시 분당구 판교로 700</p>
             </div>
           </div>
-          <form className={styles.contactForm} onSubmit={handleSubmit}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="이름"
@@ -78,7 +80,7 @@ export default function Contact() {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             />
-            <button type="submit" className="btn-primary" disabled={sending}>
+            <button type="submit" className={styles.submitBtn} disabled={sending}>
               {sending ? '전송 중...' : '문의하기'}
             </button>
           </form>

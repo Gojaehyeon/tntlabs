@@ -5,8 +5,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "TNT Labs - 앱/웹 외주 개발",
-  description: "Apple Developer Academy @Postech 출신 개발자들이 설립한 팀. 이유가 있는 설계, 기술을 지향합니다.",
+  title: "TNT Labs — AI Products",
+  description: "AI 에이전트 시스템과 프로덕트를 설계하고 구축합니다. 기술적 깊이와 실행력으로 아이디어를 현실로 전환합니다.",
 };
 
 export default function RootLayout({

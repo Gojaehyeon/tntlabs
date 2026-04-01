@@ -1,121 +1,71 @@
 'use client';
 
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { useTheme } from '@/context/ThemeContext';
 import styles from './Navbar.module.css';
-
-const navItems = [
-  { href: '/', label: 'tntlabs' },
-  { href: '/portfolio', label: '포트폴리오' },
-  { href: '/#contact', label: '문의하기' },
-];
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { theme, toggleTheme } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [atContact, setAtContact] = useState(false);
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const navRef = useRef<HTMLUListElement>(null);
-  const wrapperRef = useRef<HTMLDivElement>(null);
 
-  // Get active index based on pathname and scroll position
-  const getActiveIndex = useCallback(() => {
-    if (pathname.startsWith('/portfolio')) return 1;
-    if (pathname === '/' && atContact) return 2;
-    if (pathname === '/') return 0;
-    return 0;
-  }, [pathname, atContact]);
-
-  // Move slider to active nav item
-  const moveSlider = useCallback(() => {
-    if (!sliderRef.current || !navRef.current || !wrapperRef.current) return;
-
-    const links = navRef.current.querySelectorAll('a');
-    const activeIndex = getActiveIndex();
-    const activeLink = links[activeIndex];
-
-    if (activeLink) {
-      const linkRect = activeLink.getBoundingClientRect();
-      const wrapperRect = wrapperRef.current.getBoundingClientRect();
-
-      sliderRef.current.style.left = `${linkRect.left - wrapperRect.left}px`;
-      sliderRef.current.style.width = `${linkRect.width}px`;
-    }
-  }, [getActiveIndex]);
-
-  useEffect(() => {
-    moveSlider();
-    window.addEventListener('resize', moveSlider);
-    return () => window.removeEventListener('resize', moveSlider);
-  }, [moveSlider]);
-
-  // Handle scroll effect and contact section detection
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-
-      // 홈페이지에서만 contact 섹션 감지
-      if (pathname === '/') {
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-          const rect = contactSection.getBoundingClientRect();
-          const isAtContact = rect.top <= 200;
-          setAtContact(isAtContact);
-        }
-      }
     };
-
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // 초기 체크
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [pathname]);
+  }, []);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    setMobileOpen(false);
+    if (href.startsWith('/#') && pathname === '/') {
+      e.preventDefault();
+      const id = href.replace('/#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
-      <div className={styles.navContainer}>
+    <header className={styles.header}>
+      <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
         <Link href="/" className={styles.logo}>
-          <Image src="/logo.png" alt="TNT Labs" width={100} height={100} quality={100} />
+          <Image src="/logo.png" alt="TNTlabs" width={120} height={32} className={styles.logoImg} />
         </Link>
 
-        <div ref={wrapperRef} className={`${styles.navMenuWrapper} ${mobileOpen ? styles.active : ''}`}>
-          <div ref={sliderRef} className={styles.navSlider} />
-          <ul ref={navRef} className={styles.navMenu}>
-            {navItems.map((item, index) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={getActiveIndex() === index ? styles.navActive : ''}
-                  onClick={(e) => {
-                    setMobileOpen(false);
-                    // 홈페이지에서 #contact 클릭 시 스크롤 처리
-                    if (item.href === '/#contact' && pathname === '/') {
-                      e.preventDefault();
-                      const contactSection = document.getElementById('contact');
-                      if (contactSection) {
-                        contactSection.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }
-                  }}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div
-          className={`${styles.hamburger} ${mobileOpen ? styles.active : ''}`}
-          onClick={() => setMobileOpen(!mobileOpen)}
+        <button
+          className={styles.themeToggle}
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
         >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </nav>
+          {theme === 'dark' ? (
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          ) : (
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+          )}
+        </button>
+      </nav>
+
+    </header>
   );
 }

@@ -1,4 +1,4 @@
-.team {
+.capabilities {
     background: var(--bg-color);
     border-top: 1px solid var(--border-color);
     position: relative;
@@ -30,77 +30,41 @@
     font-weight: 400;
     color: var(--text-color);
     letter-spacing: -0.01em;
-    margin-bottom: 16px;
-}
-
-.subtitle {
-    font-size: 16px;
-    color: var(--text-muted);
-    line-height: 1.8;
 }
 
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-top: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
 }
 
-.member {
+.card {
     padding: 48px 40px;
+    border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
 
-.member:nth-child(odd) {
-    border-right: 1px solid var(--border-color);
+.number {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-muted);
+    opacity: 0.5;
+    margin-bottom: 20px;
 }
 
-.memberTop {
+.cardTitle {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color);
     margin-bottom: 16px;
 }
 
-.memberName {
-    font-size: 22px;
-    font-weight: 400;
-    color: var(--text-color);
-    margin-bottom: 4px;
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-}
-
-.memberNameKr {
-    font-size: 14px;
-    color: var(--text-muted);
-    font-weight: 400;
-}
-
-.memberRole {
-    font-size: 13px;
-    color: var(--primary-color);
-    letter-spacing: 0.02em;
-}
-
-.memberBio {
+.cardDesc {
     font-size: 15px;
     color: var(--text-muted);
     line-height: 1.8;
-    margin-bottom: 24px;
-}
-
-.memberLinks {
-    display: flex;
-    gap: 16px;
-}
-
-.memberLinks a {
-    font-size: 13px;
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.memberLinks a:hover {
-    color: var(--text-color);
 }
 
 /* Responsive */
@@ -113,11 +77,7 @@
         grid-template-columns: 1fr;
     }
 
-    .member {
+    .card {
         padding: 32px 24px;
-    }
-
-    .member:nth-child(odd) {
-        border-right: none;
     }
 }
