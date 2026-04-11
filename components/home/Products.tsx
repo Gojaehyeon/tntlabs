@@ -80,6 +80,24 @@ export default function Products() {
     }
   };
 
+  const handleTap = (id: string) => {
+    if (hovered === id) {
+      setHovered(null);
+      const video = videoRefs.current[id];
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    } else {
+      if (hovered) {
+        const prev = videoRefs.current[hovered];
+        if (prev) { prev.pause(); prev.currentTime = 0; }
+      }
+      setHovered(id);
+      videoRefs.current[id]?.play();
+    }
+  };
+
   return (
     <section className={styles.products} id="products">
       <div className={styles.container}>
@@ -92,6 +110,7 @@ export default function Products() {
               className={`${styles.item} ${hovered === product.id ? styles.itemHovered : ''}`}
               onMouseEnter={() => handleMouseEnter(product.id)}
               onMouseLeave={() => handleMouseLeave(product.id)}
+              onClick={() => handleTap(product.id)}
             >
               <div className={styles.itemLeft}>
                 <p className={styles.itemTagline} style={{ whiteSpace: 'pre-line' }}>{product.tagline}</p>

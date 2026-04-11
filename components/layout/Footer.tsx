@@ -19,7 +19,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <div className={styles.business}>
-            <p>대표: 고득성 · 사업자등록번호: 431-10-02875 · 응용 소프트웨어 개발 및 공급업</p>
+            <p>대표: 고재현 · 사업자등록번호: 431-10-02875 · 응용 소프트웨어 개발 및 공급업</p>
             <p>경기도 성남시 분당구 판교로 700 · 010-9674-1345 · contact@tntlabs.kr</p>
           </div>
           <p className={styles.copyright}>&copy; 2025 TNT LABS. All rights reserved.</p>

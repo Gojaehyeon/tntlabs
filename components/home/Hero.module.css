@@ -99,6 +99,14 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+    }
+
+    .videoWrap {
+        height: 70vh;
+    }
+
     .content {
         padding: 0 20px;
     }

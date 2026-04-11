@@ -4,7 +4,7 @@ import Statement from '@/components/home/Statement';
 import Products from '@/components/home/Products';
 // import Capabilities from '@/components/home/Capabilities';
 import Mission from '@/components/home/Mission';
-import Testimonials from '@/components/home/Testimonials';
+// import Testimonials from '@/components/home/Testimonials';
 // import About from '@/components/home/About';
 import Contact from '@/components/home/Contact';
 // import CTA from '@/components/home/CTA';
@@ -17,7 +17,7 @@ export default function Home() {
       <Statement />
       <Products />
       <Mission />
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <Capabilities /> */}
       {/* <About /> */}
       <Contact />
