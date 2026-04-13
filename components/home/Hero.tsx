@@ -1,27 +1,55 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import styles from './Hero.module.css';
 
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.muted = true;
-      video.play().catch(() => {});
-    }
+    const video = wrapRef.current?.querySelector('video');
+    if (!video) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+
+    const tryPlay = () => {
+      const p = video.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
+    };
+
+    tryPlay();
+    video.addEventListener('loadedmetadata', tryPlay);
+    video.addEventListener('canplay', tryPlay);
+
+    const onFirstInteraction = () => {
+      tryPlay();
+      document.removeEventListener('touchstart', onFirstInteraction);
+      document.removeEventListener('click', onFirstInteraction);
+    };
+    document.addEventListener('touchstart', onFirstInteraction, { once: true });
+    document.addEventListener('click', onFirstInteraction, { once: true });
+
+    return () => {
+      video.removeEventListener('loadedmetadata', tryPlay);
+      video.removeEventListener('canplay', tryPlay);
+      document.removeEventListener('touchstart', onFirstInteraction);
+      document.removeEventListener('click', onFirstInteraction);
+    };
   }, []);
 
   return (
     <section className={styles.hero}>
-      <div className={styles.videoWrap}>
-        <video ref={videoRef} className={styles.video} autoPlay muted loop playsInline>
-          <source src="/tntlabs.m4v" type="video/mp4" />
-        </video>
-        <div className={styles.overlay} />
-      </div>
+      <div
+        ref={wrapRef}
+        className={styles.videoWrap}
+        dangerouslySetInnerHTML={{
+          __html: `<video class="${styles.video}" autoplay muted loop playsinline webkit-playsinline preload="auto"><source src="/tntlabs.m4v" type="video/mp4" /></video><div class="${styles.overlay}"></div>`,
+        }}
+      />
       <div className={styles.content}>
         <h1 className={styles.title}>
           We Build AI That<br />

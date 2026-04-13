@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './Products.module.css';
 
 const products = [
@@ -64,14 +64,27 @@ const products = [
 
 export default function Products() {
   const [hovered, setHovered] = useState<string | null>(null);
+  const [hasHover, setHasHover] = useState(true);
   const videoRefs = useRef<Record<string, HTMLVideoElement | null>>({});
 
-  const handleMouseEnter = (id: string) => {
+  useEffect(() => {
+    const mq = window.matchMedia('(hover: hover)');
+    setHasHover(mq.matches);
+    const listener = (e: MediaQueryListEvent) => setHasHover(e.matches);
+    mq.addEventListener('change', listener);
+    return () => mq.removeEventListener('change', listener);
+  }, []);
+
+  const activate = (id: string) => {
+    if (hovered && hovered !== id) {
+      const prev = videoRefs.current[hovered];
+      if (prev) { prev.pause(); prev.currentTime = 0; }
+    }
     setHovered(id);
-    videoRefs.current[id]?.play();
+    videoRefs.current[id]?.play().catch(() => {});
   };
 
-  const handleMouseLeave = (id: string) => {
+  const deactivate = (id: string) => {
     setHovered(null);
     const video = videoRefs.current[id];
     if (video) {
@@ -80,21 +93,22 @@ export default function Products() {
     }
   };
 
+  const handleMouseEnter = (id: string) => {
+    if (!hasHover) return;
+    activate(id);
+  };
+
+  const handleMouseLeave = (id: string) => {
+    if (!hasHover) return;
+    deactivate(id);
+  };
+
   const handleTap = (id: string) => {
+    if (hasHover) return;
     if (hovered === id) {
-      setHovered(null);
-      const video = videoRefs.current[id];
-      if (video) {
-        video.pause();
-        video.currentTime = 0;
-      }
+      deactivate(id);
     } else {
-      if (hovered) {
-        const prev = videoRefs.current[hovered];
-        if (prev) { prev.pause(); prev.currentTime = 0; }
-      }
-      setHovered(id);
-      videoRefs.current[id]?.play();
+      activate(id);
     }
   };
 
