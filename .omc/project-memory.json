@@ -1,0 +1,145 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1779171324160,
+  "projectRoot": "/Users/go/develop/tntlabs",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "next",
+        "version": "16.1.5",
+        "category": "fullstack"
+      },
+      {
+        "name": "react",
+        "version": "19.2.3",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.2.3",
+        "category": "frontend"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "eslint"
+    }
+  },
+  "conventions": {
+    "namingStyle": "camelCase",
+    "importStyle": "ES modules",
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "app",
+      "components",
+      "lib",
+      "public"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "app": {
+      "path": "app",
+      "purpose": "Application code",
+      "fileCount": 4,
+      "lastAccessed": 1779171324147,
+      "keyFiles": [
+        "favicon.ico",
+        "globals.css",
+        "layout.tsx",
+        "page.tsx"
+      ]
+    },
+    "components": {
+      "path": "components",
+      "purpose": "UI components",
+      "fileCount": 0,
+      "lastAccessed": 1779171324148,
+      "keyFiles": []
+    },
+    "content": {
+      "path": "content",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1779171324148,
+      "keyFiles": []
+    },
+    "context": {
+      "path": "context",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1779171324151,
+      "keyFiles": [
+        "ThemeContext.tsx"
+      ]
+    },
+    "lib": {
+      "path": "lib",
+      "purpose": "Library code",
+      "fileCount": 1,
+      "lastAccessed": 1779171324151,
+      "keyFiles": [
+        "projects.ts"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 16,
+      "lastAccessed": 1779171324151,
+      "keyFiles": [
+        "air.png",
+        "atom.mov",
+        "background.mp4",
+        "belighten.mov",
+        "file.svg"
+      ]
+    },
+    "app/api": {
+      "path": "app/api",
+      "purpose": "API routes",
+      "fileCount": 0,
+      "lastAccessed": 1779171324151,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}
